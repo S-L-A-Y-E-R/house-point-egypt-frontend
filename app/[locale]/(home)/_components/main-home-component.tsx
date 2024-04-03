@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/Home/navbar';
+import QR from '@/components/Home/QR';
 
 export default function MainHomeComponent({
   NavbarTranslations,
@@ -49,9 +50,12 @@ export default function MainHomeComponent({
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <Navbar
-      SearchbarTranslations={SearchbarTranslations}
-      NavbarTranslations={NavbarTranslations}
-    />
+    <>
+      <Navbar
+        SearchbarTranslations={SearchbarTranslations}
+        NavbarTranslations={NavbarTranslations}
+      />
+      <QR />
+    </>
   );
 }
