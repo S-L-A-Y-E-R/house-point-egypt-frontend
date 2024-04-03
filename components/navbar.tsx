@@ -1,7 +1,7 @@
 'use client';
 
 import { Link } from '@/navigation';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -91,6 +91,7 @@ const Navbar = ({
                 alt='Logo'
                 title='House Point Egypt Logo'
                 className='m-2 px-4 cursor-pointer'
+                quality={50}
               />
             </span>
           </Link>
