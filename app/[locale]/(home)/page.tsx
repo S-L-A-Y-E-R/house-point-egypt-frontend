@@ -7,6 +7,7 @@ export default async function Home({
   params: { locale: string };
 }) {
   const t = await getTranslations({ locale, namespace: 'general.components' });
+  const t2 = await getTranslations({ locale, namespace: 'pages.blog' });
   const navbarTranslations = {
     home: t('navbar.home'),
     rent: t('navbar.rent'),
@@ -47,6 +48,37 @@ export default async function Home({
     minprice: t('searchbar.minprice'),
     maxprice: t('searchbar.maxprice'),
   };
+  const footerTranslations = {
+    about_us: t('footer.about_us'),
+    new_links: t('footer.new_links'),
+  };
+  const propertyCardTranslations = {
+    sqm: t('property_card.sqm'),
+    egp: t('property_card.egp'),
+    bedrooms: t('property_card.bedrooms'),
+    bathrooms: t('property_card.bathrooms'),
+    for: t('property_card.for'),
+    refnum: t('property_card.refnum'),
+    month: t('property_card.month'),
+    share_property: t('property_card.share_property'),
+    whatsapp_property: t('property_card.whatsapp_property'),
+    favorite_property: t('property_card.favorite_property'),
+  };
+  const blogTranslations = {
+    title: t2('title'),
+    min: t2('min'),
+    writter: t2('writter'),
+    read_more: t2('read_more'),
+    topics: t2('topics'),
+    tags: t2('tags'),
+    tag: t2('tag'),
+    related_properties: t2('related_properties'),
+    feature_properties: t2('feature_properties'),
+    share: t2('share'),
+    topic: t2('topic'),
+    read: t2('read'),
+    authby: t2('authby'),
+  };
 
   let link = '/';
   if (locale == 'ar') link += 'ar';
@@ -67,22 +99,56 @@ export default async function Home({
       },
     }),
     fetch(`${process.env.API_BASE_URL}/social-media`),
+    fetch(`${process.env.API_BASE_URL}/utils/getcurrency`),
+    fetch(`${process.env.API_BASE_URL}/blog/latest`, {
+      headers: {
+        'accept-language': locale === 'en' ? 'en' : 'ar',
+      },
+    }),
   ]);
 
-  const [fetchMeta, fetchSale, fetchRent, fetchTitles, fetchSocialLinks] =
-    await Promise.all(response.map((res) => res.json()));
-  const [meta, saleProperties, rentProperties, titles, socialLinks] = [
+  const [
+    fetchMeta,
+    fetchSale,
+    fetchRent,
+    fetchTitles,
+    fetchSocialLinks,
+    fetchCurrency,
+    fetchLatestBlogs,
+  ] = await Promise.all(response.map((res) => res.json()));
+  const [
+    meta,
+    saleProperties,
+    rentProperties,
+    titles,
+    socialLinks,
+    liveCurrency,
+    latestBlogs,
+  ] = [
     fetchMeta.meta,
     fetchSale.properties,
     fetchRent.properties,
     fetchTitles.pageTitle,
     fetchSocialLinks,
+    fetchCurrency.currency,
+    fetchLatestBlogs,
   ];
 
   return (
     <MainHomeComponent
       NavbarTranslations={navbarTranslations}
       SearchbarTranslations={searchbarTranslations}
+      FooterTranslations={footerTranslations}
+      locale={locale}
+      meta={meta}
+      saleProperties={saleProperties}
+      rentProperties={rentProperties}
+      titles={titles}
+      socialLinks={socialLinks}
+      liveCurrency={liveCurrency}
+      PropertyCardTranslations={propertyCardTranslations}
+      latestBlogs={latestBlogs}
+      blogTranslations={blogTranslations}
     />
   );
 }
