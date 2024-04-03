@@ -86,6 +86,7 @@ const Navbar = ({
             <span>
               <Image
                 src='/images/HPlogo.png'
+                loading='lazy'
                 width={260}
                 height={80}
                 alt='Logo'

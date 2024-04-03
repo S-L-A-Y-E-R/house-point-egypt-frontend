@@ -11,6 +11,7 @@ export default function QR() {
         alt='QRCode'
         title='QRCode'
         quality={50}
+        loading='lazy'
       />
     </div>
   );

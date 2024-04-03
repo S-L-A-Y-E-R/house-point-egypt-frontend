@@ -137,6 +137,7 @@ export default function PropertyCard({
               <div className='z-10 '>
                 {
                   <Image
+                    loading='lazy'
                     src={
                       process.env.PROPERTY_BASE_URL + '/original/' + image.image
                     }
@@ -173,6 +174,7 @@ export default function PropertyCard({
                   <div className='flex flex-col items-center gap-3 px-2 py-2 text-xs font-bold tracking-wider text-white transition-all bg-opacity-50 font-openSans bg-custom-blue'>
                     <div className='w-full flex justify-start items-center'>
                       <Image
+                        loading='lazy'
                         src='/assets/pin.png'
                         width='20'
                         height='20'
@@ -247,6 +249,7 @@ export default function PropertyCard({
                               .join('-')}`}
                           >
                             <Image
+                              loading='lazy'
                               src='/assets/face.png'
                               alt='facebook icon'
                               width='35'
@@ -262,6 +265,7 @@ export default function PropertyCard({
                               .join('-')}`}
                           >
                             <Image
+                              loading='lazy'
                               src='/assets/twitter.png'
                               alt='twitter icon'
                               width='35'
@@ -276,6 +280,7 @@ export default function PropertyCard({
                               .join('-')}`}
                           >
                             <Image
+                              loading='lazy'
                               src='/assets/linkedin.png'
                               alt='linkedin icon'
                               width='35'
@@ -343,6 +348,7 @@ export default function PropertyCard({
               <div className='flex flex-col gap-2'>
                 <span className='flex items-center gap-1'>
                   <Image
+                    loading='lazy'
                     src='/assets/bedflat.png'
                     alt='bed'
                     width='25'
@@ -354,6 +360,7 @@ export default function PropertyCard({
                 </span>
                 <span className='flex items-center gap-1'>
                   <Image
+                    loading='lazy'
                     src='/assets/bathflat.png'
                     alt='bath'
                     width='25'
@@ -367,6 +374,7 @@ export default function PropertyCard({
               <div className='flex flex-col gap-2'>
                 <span className='flex items-center gap-1'>
                   <Image
+                    loading='lazy'
                     src='/assets/surfaceflat.png'
                     alt='surface'
                     width='25'
@@ -382,6 +390,7 @@ export default function PropertyCard({
                 </span>
                 <span className='flex items-center gap-1'>
                   <Image
+                    loading='lazy'
                     src='/assets/couchflat.png'
                     alt='couch'
                     width='25'

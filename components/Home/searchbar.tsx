@@ -474,6 +474,7 @@ function Searchbar({
                                           }`}
                                         >
                                           <Image
+                                            loading='lazy'
                                             src='/assets/pin-location.png'
                                             width='20'
                                             height='20'
@@ -535,6 +536,7 @@ function Searchbar({
                                               }`}
                                             >
                                               <Image
+                                                loading='lazy'
                                                 src='/assets/pin-location.png'
                                                 width='20'
                                                 height='20'
