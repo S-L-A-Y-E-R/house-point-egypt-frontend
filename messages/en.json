@@ -36,7 +36,8 @@
         "sale": "Sale",
         "contact": "Contact Us",
         "blogs": "Articles",
-        "favorite": "Favorites"
+        "favorite": "Favorites",
+        "login": "Login"
       },
       "property_card": {
         "sqm": "Sqm",
