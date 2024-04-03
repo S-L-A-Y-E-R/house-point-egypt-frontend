@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 import { FaAngleDown, FaCheckCircle } from 'react-icons/fa';
 import { Fragment } from 'react';
@@ -57,6 +58,7 @@ function Searchbar({
   setShowModal: any;
 }) {
   const [query, setQuery] = useState('');
+  const searchParams = useSearchParams();
   const isArabic = locale === 'ar';
   const router = useRouter();
   const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
@@ -175,35 +177,46 @@ function Searchbar({
         setPropertyLocation(response.data.areas);
         setPropertyTypes(response.data.propertyTypes);
         setFinishingLevel(response.data.furnitureSetting);
-        const {
-          query: {
-            beds,
-            baths,
-            minPrice,
-            maxPrice,
-            furnitureSetting,
-            minPropertyArea,
-            maxPropertyArea,
-            type,
-            propertyType,
-            location,
-            subArea,
-          },
-        }: {
-          query: {
-            beds: string;
-            baths: string;
-            minPrice: string;
-            maxPrice: string;
-            furnitureSetting: string;
-            minPropertyArea: string;
-            maxPropertyArea: string;
-            type: string;
-            propertyType: string;
-            location: string;
-            subArea: string;
-          };
-        } = router;
+        // const {
+        //   query: {
+        //     beds,
+        //     baths,
+        //     minPrice,
+        //     maxPrice,
+        //     furnitureSetting,
+        //     minPropertyArea,
+        //     maxPropertyArea,
+        //     type,
+        //     propertyType,
+        //     location,
+        //     subArea,
+        //   },
+        // }: {
+        //   query: {
+        //     beds: string;
+        //     baths: string;
+        //     minPrice: string;
+        //     maxPrice: string;
+        //     furnitureSetting: string;
+        //     minPropertyArea: string;
+        //     maxPropertyArea: string;
+        //     type: string;
+        //     propertyType: string;
+        //     location: string;
+        //     subArea: string;
+        //   };
+        // } = router;
+        const beds = searchParams.get('beds');
+        const baths = searchParams.get('baths');
+        const minPrice = searchParams.get('minPrice');
+        const maxPrice = searchParams.get('maxPrice');
+        const furnitureSetting = searchParams.get('furnitureSetting');
+        const minPropertyArea = searchParams.get('minPropertyArea');
+        const maxPropertyArea = searchParams.get('maxPropertyArea');
+        const type = searchParams.get('type');
+        const propertyType = searchParams.get('propertyType');
+        const location = searchParams.get('location')?.split('-').join(' ');
+        const subArea = searchParams.get('subArea')?.split('-').join(' ');
         if (type && type !== 'for-rent-or-sale')
           setType(
             type == SearchbarTranslations.rent.toLowerCase()
@@ -233,6 +246,7 @@ function Searchbar({
     SearchbarTranslations.sale,
     countState,
     router,
+    searchParams,
   ]);
   const toggleAdvancedSearch = () => {
     setShowAdvancedSearch(!showAdvancedSearch);
@@ -294,16 +308,7 @@ function Searchbar({
           pathName + `/${selectedPropertyLocation}`.split(' ').join('-');
       } else {
       }
-      router
-        .push(
-          {
-            pathname: pathName.toLowerCase(),
-            query: queryStr,
-          },
-          undefined,
-          { shallow: true }
-        )
-        .then((e: any) => router.reload());
+      router.push(pathName.toLowerCase());
     } catch (error) {
       console.error('Error searching properties:', error);
     } finally {
