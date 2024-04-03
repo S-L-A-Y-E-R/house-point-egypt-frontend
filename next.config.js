@@ -1,6 +1,15 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  env: {
+    WEBSITE_BASE_URL: process.env.WEBSITE_BASE_URL,
+    API_BASE_URL: process.env.API_BASE_URL,
+    PROPERTY_BASE_URL: process.env.PROPERTY_BASE_URL,
+    BLOG_IMAGE_BASE_URL: process.env.BLOG_IMAGE_BASE_URL,
+  },
   images: {
     domains: [
       'th.bing.com',
@@ -56,4 +65,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = withNextIntl(nextConfig);
