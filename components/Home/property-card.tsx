@@ -147,7 +147,7 @@ export default function PropertyCard({
                   //   width={1200}
                   //   height={900}
                   //   title='Property Photo'
-                  //   quality={30}
+                  //   quality={50}
                   // />
                 }
               </div>
@@ -180,7 +180,7 @@ export default function PropertyCard({
                         height='20'
                         alt='pin'
                         title='pin'
-                        quality={30}
+                        quality={50}
                       /> */}
                       {location.replace(/\w\S*/g, function (txt) {
                         return (
@@ -242,53 +242,53 @@ export default function PropertyCard({
                         leaveTo='opacity-0 translate-y-1'
                       >
                         <Popover.Panel className='absolute z-50 flex flex-wrap items-center justify-center w-24 p-1 text-red-500 transform -translate-x-1/2 bg-white ltr:-right-3 rtl:left-1/3 -top-24'>
-                          <FacebookShareButton
+                          {/* <FacebookShareButton
                             url={`${propertyLink
                               .toLowerCase()
                               .split(' ')
                               .join('-')}`}
                           >
-                            {/* <Image
+                            <Image
                               
                               src='/assets/face.png'
                               alt='facebook icon'
                               width='35'
                               height='35'
                               title='Share on Facebook'
-                              quality={30}
-                            /> */}
-                          </FacebookShareButton>
-                          <TwitterShareButton
+                              quality={50}
+                            />
+                          </FacebookShareButton> */}
+                          {/* <TwitterShareButton
                             url={`${propertyLink
                               .toLowerCase()
                               .split(' ')
                               .join('-')}`}
                           >
-                            {/* <Image
+                            <Image
                               
                               src='/assets/twitter.png'
                               alt='twitter icon'
                               width='35'
                               height='35'
                               title='Share on Twitter'
-                            /> */}
-                          </TwitterShareButton>
-                          <LinkedinShareButton
+                            />
+                          </TwitterShareButton> */}
+                          {/* <LinkedinShareButton
                             url={`${propertyLink
                               .toLowerCase()
                               .split(' ')
                               .join('-')}`}
                           >
-                            {/* <Image
+                            <Image
                               
                               src='/assets/linkedin.png'
                               alt='linkedin icon'
                               width='35'
                               height='35'
                               title='Share on Linkedin'
-                              quality={30}
-                            /> */}
-                          </LinkedinShareButton>
+                              quality={50}
+                            />
+                          </LinkedinShareButton> */}
                         </Popover.Panel>
                       </Transition>
                     </>
@@ -354,7 +354,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='bed'
-                    quality={30}
+                    quality={50}
                   />{' '} */}
                   {beds} {PropertyCardTranslations.bedrooms}
                 </span>
@@ -366,7 +366,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='bath'
-                    quality={30}
+                    quality={50}
                   />{' '} */}
                   {bathrooms} {PropertyCardTranslations.bathrooms}
                 </span>
@@ -380,7 +380,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='surface'
-                    quality={30}
+                    quality={50}
                   /> */}
                   {area}{' '}
                   <span>
@@ -396,7 +396,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='couch'
-                    quality={30}
+                    quality={50}
                   /> */}
                   {furnitureStatus}{' '}
                 </span>
