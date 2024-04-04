@@ -136,19 +136,19 @@ export default function PropertyCard({
             <div className='aspect-[3/2]'>
               <div className='z-10 '>
                 {
-                  <Image
+                  // <Image
                     
-                    src={
-                      process.env.PROPERTY_BASE_URL + '/original/' + image.image
-                    }
-                    blurDataURL={image.placeholder}
-                    alt='Property Photo'
-                    placeholder='blur'
-                    width={1200}
-                    height={900}
-                    title='Property Photo'
-                    quality={30}
-                  />
+                  //   src={
+                  //     process.env.PROPERTY_BASE_URL + '/original/' + image.image
+                  //   }
+                  //   blurDataURL={image.placeholder}
+                  //   alt='Property Photo'
+                  //   placeholder='blur'
+                  //   width={1200}
+                  //   height={900}
+                  //   title='Property Photo'
+                  //   quality={30}
+                  // />
                 }
               </div>
             </div>
