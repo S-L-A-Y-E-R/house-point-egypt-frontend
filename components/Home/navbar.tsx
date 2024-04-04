@@ -92,7 +92,7 @@ const Navbar = ({
                 alt='Logo'
                 title='House Point Egypt Logo'
                 className='m-2 px-4 cursor-pointer'
-                quality={50}
+                quality={30}
               />
             </span>
           </Link>

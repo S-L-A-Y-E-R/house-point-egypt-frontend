@@ -474,13 +474,12 @@ function Searchbar({
                                           }`}
                                         >
                                           <Image
-                                            loading='lazy'
                                             src='/assets/pin-location.png'
                                             width='20'
                                             height='20'
                                             alt='Pin'
                                             title='Pin'
-                                            quality={50}
+                                            quality={30}
                                           />
                                           {locale === 'en'
                                             ? location.name
@@ -536,13 +535,12 @@ function Searchbar({
                                               }`}
                                             >
                                               <Image
-                                                loading='lazy'
                                                 src='/assets/pin-location.png'
                                                 width='20'
                                                 height='20'
                                                 alt='pin'
                                                 title='pin'
-                                                quality={50}
+                                                quality={30}
                                               />
                                               {locale === 'en'
                                                 ? subArea.name

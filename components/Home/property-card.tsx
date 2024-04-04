@@ -147,7 +147,7 @@ export default function PropertyCard({
                     width={1200}
                     height={900}
                     title='Property Photo'
-                    quality={40}
+                    quality={30}
                   />
                 }
               </div>
@@ -180,7 +180,7 @@ export default function PropertyCard({
                         height='20'
                         alt='pin'
                         title='pin'
-                        quality={40}
+                        quality={30}
                       />
                       {location.replace(/\w\S*/g, function (txt) {
                         return (
@@ -255,7 +255,7 @@ export default function PropertyCard({
                               width='35'
                               height='35'
                               title='Share on Facebook'
-                              quality={40}
+                              quality={30}
                             />
                           </FacebookShareButton>
                           <TwitterShareButton
@@ -286,7 +286,7 @@ export default function PropertyCard({
                               width='35'
                               height='35'
                               title='Share on Linkedin'
-                              quality={40}
+                              quality={30}
                             />
                           </LinkedinShareButton>
                         </Popover.Panel>
@@ -354,7 +354,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='bed'
-                    quality={40}
+                    quality={30}
                   />{' '}
                   {beds} {PropertyCardTranslations.bedrooms}
                 </span>
@@ -366,7 +366,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='bath'
-                    quality={40}
+                    quality={30}
                   />{' '}
                   {bathrooms} {PropertyCardTranslations.bathrooms}
                 </span>
@@ -380,7 +380,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='surface'
-                    quality={40}
+                    quality={30}
                   />
                   {area}{' '}
                   <span>
@@ -396,7 +396,7 @@ export default function PropertyCard({
                     width='25'
                     height='25'
                     title='couch'
-                    quality={40}
+                    quality={30}
                   />
                   {furnitureStatus}{' '}
                 </span>

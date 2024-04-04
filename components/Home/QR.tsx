@@ -10,8 +10,7 @@ export default function QR() {
         className='shadow-outline shadow-2xl border-8 border-white rounded shadow-black'
         alt='QRCode'
         title='QRCode'
-        quality={50}
-        loading='lazy'
+        quality={30}
       />
     </div>
   );

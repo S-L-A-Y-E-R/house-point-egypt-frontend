@@ -58,14 +58,13 @@ const Article = ({
       >
         <div className={`${style.postCenter} ${style.image}`}>
           <Image
-            loading='lazy'
             placeholder='blur'
             blurDataURL='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20250%22%2F%3E'
             className={`${style.postImage}`}
             src={process.env.BLOG_IMAGE_BASE_URL + post.image}
             alt={post.title}
             title='image'
-            quality={100}
+            quality={30}
             width={400}
             height={250}
           />
