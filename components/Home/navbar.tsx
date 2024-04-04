@@ -86,7 +86,7 @@ const Navbar = ({
             <span>
               <Image
                 src='/images/HPlogo.png'
-                loading='lazy'
+                
                 width={260}
                 height={80}
                 alt='Logo'
@@ -173,13 +173,13 @@ const Navbar = ({
             </div>
             <div className='flex flex-col justify-center mx-2 mt-2'>
               {logged == '' && (
-                <a
+                <Link
                   className='w-fit font-semibold mx-4 mb-2 px-8 py-1 text-center bg-white rounded text-[#095668]'
                   href='/login'
                   title='Login'
                 >
                   {NavbarTranslations.login}
-                </a>
+                </Link>
               )}
               {logged !== '' && (
                 <div className='flex items-center mx-2 mb-4'>
