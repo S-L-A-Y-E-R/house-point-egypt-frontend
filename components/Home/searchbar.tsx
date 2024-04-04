@@ -473,14 +473,14 @@ function Searchbar({
                                               : 'font-normal'
                                           }`}
                                         >
-                                          <Image
+                                          {/* <Image
                                             src='/assets/pin-location.png'
                                             width='20'
                                             height='20'
                                             alt='Pin'
                                             title='Pin'
                                             quality={30}
-                                          />
+                                          /> */}
                                           {locale === 'en'
                                             ? location.name
                                             : location.nameAr}
@@ -534,14 +534,14 @@ function Searchbar({
                                                   : 'font-normal'
                                               }`}
                                             >
-                                              <Image
+                                              {/* <Image
                                                 src='/assets/pin-location.png'
                                                 width='20'
                                                 height='20'
                                                 alt='pin'
                                                 title='pin'
                                                 quality={30}
-                                              />
+                                              /> */}
                                               {locale === 'en'
                                                 ? subArea.name
                                                 : subArea.nameAr}

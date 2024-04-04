@@ -84,7 +84,7 @@ const Navbar = ({
         <div className='relative flex flex-wrap items-center justify-between w-full md:w-fit'>
           <Link href='/' title='Home'>
             <span>
-              <Image
+              {/* <Image
                 src='/images/HPlogo.png'
                 
                 width={260}
@@ -93,7 +93,7 @@ const Navbar = ({
                 title='House Point Egypt Logo'
                 className='m-2 px-4 cursor-pointer'
                 quality={30}
-              />
+              /> */}
             </span>
           </Link>
           <button

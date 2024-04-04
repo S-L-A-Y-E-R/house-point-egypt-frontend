@@ -173,7 +173,7 @@ export default function PropertyCard({
 
                   <div className='flex flex-col items-center gap-3 px-2 py-2 text-xs font-bold tracking-wider text-white transition-all bg-opacity-50 font-openSans bg-custom-blue'>
                     <div className='w-full flex justify-start items-center'>
-                      <Image
+                      {/* <Image
                         
                         src='/assets/pin.png'
                         width='20'
@@ -181,7 +181,7 @@ export default function PropertyCard({
                         alt='pin'
                         title='pin'
                         quality={30}
-                      />
+                      /> */}
                       {location.replace(/\w\S*/g, function (txt) {
                         return (
                           txt.charAt(0).toUpperCase() +
@@ -248,7 +248,7 @@ export default function PropertyCard({
                               .split(' ')
                               .join('-')}`}
                           >
-                            <Image
+                            {/* <Image
                               
                               src='/assets/face.png'
                               alt='facebook icon'
@@ -256,7 +256,7 @@ export default function PropertyCard({
                               height='35'
                               title='Share on Facebook'
                               quality={30}
-                            />
+                            /> */}
                           </FacebookShareButton>
                           <TwitterShareButton
                             url={`${propertyLink
@@ -264,14 +264,14 @@ export default function PropertyCard({
                               .split(' ')
                               .join('-')}`}
                           >
-                            <Image
+                            {/* <Image
                               
                               src='/assets/twitter.png'
                               alt='twitter icon'
                               width='35'
                               height='35'
                               title='Share on Twitter'
-                            />
+                            /> */}
                           </TwitterShareButton>
                           <LinkedinShareButton
                             url={`${propertyLink
@@ -279,7 +279,7 @@ export default function PropertyCard({
                               .split(' ')
                               .join('-')}`}
                           >
-                            <Image
+                            {/* <Image
                               
                               src='/assets/linkedin.png'
                               alt='linkedin icon'
@@ -287,7 +287,7 @@ export default function PropertyCard({
                               height='35'
                               title='Share on Linkedin'
                               quality={30}
-                            />
+                            /> */}
                           </LinkedinShareButton>
                         </Popover.Panel>
                       </Transition>
@@ -347,7 +347,7 @@ export default function PropertyCard({
             <div className='flex items-center justify-around py-1 text-sm '>
               <div className='flex flex-col gap-2'>
                 <span className='flex items-center gap-1'>
-                  <Image
+                  {/* <Image
                     
                     src='/assets/bedflat.png'
                     alt='bed'
@@ -355,11 +355,11 @@ export default function PropertyCard({
                     height='25'
                     title='bed'
                     quality={30}
-                  />{' '}
+                  />{' '} */}
                   {beds} {PropertyCardTranslations.bedrooms}
                 </span>
                 <span className='flex items-center gap-1'>
-                  <Image
+                  {/* <Image
                     
                     src='/assets/bathflat.png'
                     alt='bath'
@@ -367,13 +367,13 @@ export default function PropertyCard({
                     height='25'
                     title='bath'
                     quality={30}
-                  />{' '}
+                  />{' '} */}
                   {bathrooms} {PropertyCardTranslations.bathrooms}
                 </span>
               </div>
               <div className='flex flex-col gap-2'>
                 <span className='flex items-center gap-1'>
-                  <Image
+                  {/* <Image
                     
                     src='/assets/surfaceflat.png'
                     alt='surface'
@@ -381,7 +381,7 @@ export default function PropertyCard({
                     height='25'
                     title='surface'
                     quality={30}
-                  />
+                  /> */}
                   {area}{' '}
                   <span>
                     {PropertyCardTranslations.sqm}
@@ -389,7 +389,7 @@ export default function PropertyCard({
                   </span>
                 </span>
                 <span className='flex items-center gap-1'>
-                  <Image
+                  {/* <Image
                     
                     src='/assets/couchflat.png'
                     alt='couch'
@@ -397,7 +397,7 @@ export default function PropertyCard({
                     height='25'
                     title='couch'
                     quality={30}
-                  />
+                  /> */}
                   {furnitureStatus}{' '}
                 </span>
               </div>

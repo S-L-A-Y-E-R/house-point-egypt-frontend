@@ -57,7 +57,7 @@ const Article = ({
         }}
       >
         <div className={`${style.postCenter} ${style.image}`}>
-          <Image
+          {/* <Image
             placeholder='blur'
             blurDataURL='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20250%22%2F%3E'
             className={`${style.postImage}`}
@@ -67,7 +67,7 @@ const Article = ({
             quality={30}
             width={400}
             height={250}
-          />
+          /> */}
         </div>
         <div className={`${style.postCenter} ${style.title}`}>
           <h3 className={`${style.postTitle}`}>{post.title}</h3>
